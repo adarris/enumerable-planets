@@ -8,7 +8,16 @@
 
 </head>
 <body>
-<h1>Pick a planet:</h1>
+<table class="table">
+    <tr>Planets</tr>
+    <tr>Year Length</tr>
+
+    <th:block th:each="planet : ${planets}">
+        <td th:text="${planet.getName}"></td>
+        <td th:text="${planet.getYearLength}"></td>
+
+    </th:block>
+</table>
 
 </body>
 </html>
